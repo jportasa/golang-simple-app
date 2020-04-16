@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  node0:
+    image: ubuntu
+    command: sleep 999999999
+    volumes:
+     - ./app:/app
+    ports:
+      - "80:80"
+    networks:
+      - front-tier
+      - back-tier
+
+networks:
+  front-tier:
+  back-tier:
